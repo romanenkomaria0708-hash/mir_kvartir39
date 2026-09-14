@@ -1,0 +1,10 @@
+# Backup / working files, not part of the published site
+_backup_do_not_delete/
+прототип/
+*.bak
+.DS_Store
+
+# Source docs, not needed for the demo site
+Про компанию.rtf
+CONTEXT.md
+.claude/

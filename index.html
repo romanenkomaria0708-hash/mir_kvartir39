@@ -1,0 +1,730 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Мир Квартир.39 — Недвижимость в Калининграде</title>
+<meta name="description" content="Купить, продать, переехать или разобраться в сложной ситуации с недвижимостью в Калининграде. 350+ объектов, более 120 сделок, с 2022 года на рынке.">
+<link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<a class="skip-link" href="#main">Перейти к содержимому</a>
+
+<!-- ===== HEADER (floating pill, overlays hero image, stays sticky) ===== -->
+<header class="header" id="top">
+  <div class="container">
+    <div class="header__inner">
+      <a href="#top" class="logo" aria-label="Мир Квартир.39 — на главную">
+        <img src="images/logo.svg" alt="Мир Квартир.39" class="logo__img">
+      </a>
+
+      <nav class="nav" id="main-nav" aria-label="Основная навигация">
+        <ul class="nav__list">
+          <li><a href="#how-we-work">Как мы работаем</a></li>
+          <li><a href="#house-building">Строительство домов</a></li>
+          <li><a href="#cases">Отзывы</a></li>
+          <li><a href="#contacts">Контакты</a></li>
+        </ul>
+      </nav>
+
+      <button class="btn btn--primary header__cta js-open-modal" data-scenario="Связаться с нами">
+        Связаться с нами
+        <svg class="icon icon--sm" viewBox="0 0 24 24" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      </button>
+
+      <button class="burger" id="burgerBtn" aria-expanded="false" aria-controls="mobile-nav" aria-label="Открыть меню">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+
+  <!-- Mobile navigation -->
+  <div class="mobile-nav" id="mobile-nav">
+    <ul class="mobile-nav__list">
+      <li><a href="#how-we-work">Как мы работаем</a></li>
+      <li><a href="#house-building">Строительство домов</a></li>
+      <li><a href="#cases">Отзывы</a></li>
+      <li><a href="#contacts">Контакты</a></li>
+    </ul>
+    <a class="btn btn--secondary phone-link phone-link--mobile" href="tel:+79211611455">+7 (921) 161-14-55</a>
+    <button class="btn btn--primary js-open-modal" data-scenario="Связаться с нами">Связаться с нами</button>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- ===== HERO (full-bleed image, no container constraint) ===== -->
+  <section class="hero-section">
+    <img class="hero-section__bg" src="images/hero-residential-complex-16x9-edited.png" alt="" role="presentation">
+    <div class="hero-section__glow" aria-hidden="true"></div>
+    <div class="container hero-section__inner">
+      <div class="hero-section__text">
+        <span class="eyebrow">Агентство недвижимости · Калининград</span>
+        <h1 class="hero-section__title">Не просто найдём недвижимость.<br>Найдём решение.</h1>
+        <p class="hero-section__desc">Квартира, дом, продажа, переезд или сложная ситуация — разберёмся, что подходит вам, и пройдём этот путь вместе.</p>
+        <div class="hero-section__actions">
+          <button class="btn btn--primary js-open-modal" data-scenario="Обсудить ситуацию">Обсудить ситуацию</button>
+          <a class="btn btn--text" href="#scenarios">С чего вы хотите начать <svg class="icon" viewBox="0 0 20 20"><path d="M4 10h12M11 5l5 5-5 5"/></svg></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== HERO STATS (separate floating white panel, light page bg behind it) ===== -->
+  <div class="container">
+    <div class="hero-stats">
+      <div class="hero-stats__item"><span class="hero-stats__value">350+</span><span class="hero-stats__label">объектов в базе</span></div>
+      <div class="hero-stats__item"><span class="hero-stats__value">120+</span><span class="hero-stats__label">закрытых сделок</span></div>
+      <div class="hero-stats__item"><span class="hero-stats__value">2022</span><span class="hero-stats__label">на рынке с</span></div>
+    </div>
+  </div>
+
+  <!-- ===== SCENARIO SELECTOR (interactive scenario map) ===== -->
+  <section class="section" id="scenarios" aria-labelledby="scenarios-title">
+    <div class="container">
+      <span class="eyebrow">Начните здесь</span>
+      <h2 id="scenarios-title" class="section-title scenario-scene__title">С чем вы сейчас разбираетесь?</h2>
+      <p class="section-lead">Выберите ситуацию — мы покажем, с чего начать и чем сможем помочь.</p>
+
+      <div class="scenario-scene">
+        <!-- primary 2×2 grid -->
+        <div class="scenario-scene__grid" role="group" aria-label="Основные сценарии">
+          <button type="button" class="scenario-card scenario-card--buy" data-target="#calc-buy" aria-pressed="false" aria-label="Хочу купить — перейти к разделу">
+            <span class="scenario-card__number">01</span>
+            <span class="scenario-card__title">Хочу купить</span>
+            <span class="scenario-card__action" aria-hidden="true">
+              <svg class="icon" viewBox="0 0 20 20"><path d="M4 10h12M11 5l5 5-5 5"/></svg>
+            </span>
+          </button>
+
+          <button type="button" class="scenario-card scenario-card--sell" data-target="#calc-sell" aria-pressed="false" aria-label="Хочу продать — перейти к разделу">
+            <span class="scenario-card__number">02</span>
+            <span class="scenario-card__title">Хочу продать</span>
+            <span class="scenario-card__action" aria-hidden="true">
+              <svg class="icon" viewBox="0 0 20 20"><path d="M4 10h12M11 5l5 5-5 5"/></svg>
+            </span>
+          </button>
+
+          <button type="button" class="scenario-card scenario-card--house" data-target="#house-building" aria-pressed="false" aria-label="Хочу свой дом — перейти к разделу">
+            <span class="scenario-card__number">03</span>
+            <span class="scenario-card__title">Хочу свой дом</span>
+            <span class="scenario-card__action" aria-hidden="true">
+              <svg class="icon" viewBox="0 0 20 20"><path d="M4 10h12M11 5l5 5-5 5"/></svg>
+            </span>
+          </button>
+
+          <button type="button" class="scenario-card scenario-card--invest scenario-card--compact" data-target="#calc-invest" aria-pressed="false" aria-label="Хочу инвестировать — перейти к разделу">
+            <span class="scenario-card__number">04</span>
+            <span class="scenario-card__title">Хочу инвестировать</span>
+            <span class="scenario-card__action" aria-hidden="true">
+              <svg class="icon" viewBox="0 0 20 20"><path d="M4 10h12M11 5l5 5-5 5"/></svg>
+            </span>
+          </button>
+        </div>
+
+        <!-- secondary cards + CTA -->
+        <div class="scenario-scene__rail">
+          <button type="button" class="scenario-card scenario-card--rail scenario-card--relocation" data-target="#relocation" aria-pressed="false" aria-label="Переезжаю в Калининград — перейти к разделу">
+            <span class="scenario-card__number">05</span>
+            <span class="scenario-card__title">Переезжаю в Калининград</span>
+            <span class="scenario-card__action" aria-hidden="true">
+              <svg class="icon icon--sm" viewBox="0 0 20 20"><path d="M4 10h12M11 5l5 5-5 5"/></svg>
+            </span>
+          </button>
+
+          <button type="button" class="scenario-card scenario-card--rail scenario-card--special" data-target="#calc-complex" aria-pressed="false" aria-label="Сложная ситуация — перейти к разделу">
+            <span class="scenario-card__number">06</span>
+            <span class="scenario-card__title">Сложная ситуация</span>
+            <span class="scenario-card__action" aria-hidden="true">
+              <svg class="icon icon--sm" viewBox="0 0 20 20"><path d="M4 10h12M11 5l5 5-5 5"/></svg>
+            </span>
+          </button>
+
+          <div class="scenario-scene__cta-wrap">
+            <button type="button" class="btn scenario-scene__cta js-open-modal" data-scenario="Обсудить ситуацию">
+              Обсудить ситуацию
+              <svg class="icon icon--sm" viewBox="0 0 20 20"><path d="M4 10h12M11 5l5 5-5 5"/></svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CTA BANNER 1 ===== -->
+  <section class="section">
+    <div class="container">
+      <div class="cta-banner cta-banner--photo">
+        <h2 class="cta-banner__title">Уже понимаете, чего хотите?<br>Расскажите ситуацию — специалист поможет определить следующий шаг</h2>
+        <button class="btn btn--primary js-open-modal" data-scenario="Обсудить ситуацию">Обсудить ситуацию</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== HOW WE WORK / PROCESS ===== -->
+  <section class="section" id="how-we-work" aria-labelledby="how-we-work-title">
+    <div class="container">
+      <span class="eyebrow">Как мы работаем</span>
+      <h2 id="how-we-work-title" class="section-title">Не начинаем с объекта<br>Начинаем с вашей задачи</h2>
+      <p class="section-lead">Вы приходите не за «квартирой из базы». Вы приходите с задачей — купить, продать, переехать, построить, инвестировать или разобраться в сложной ситуации.<br>Мы помогаем понять, что делать дальше.</p>
+
+      <ol class="process-list">
+        <li class="process-list__item">
+          <span class="process-list__index">[01]</span>
+          <div class="process-list__label">Вы говорите</div>
+          <div class="process-list__content">
+            <p class="process-list__highlight">Хочу переехать в Калининград и купить дом до 10&nbsp;млн&nbsp;₽.</p>
+          </div>
+        </li>
+        <li class="process-list__item">
+          <span class="process-list__index">[02]</span>
+          <div class="process-list__label">Мы уточняем</div>
+          <div class="process-list__content process-list__content--qa">
+            <div class="qa"><p class="qa__q">Где хотите жить?</p><p class="qa__a">Город, пригород или дальше от Калининграда?</p></div>
+            <div class="qa"><p class="qa__q">Какой бюджет комфортен?</p><p class="qa__a">Включает ли он участок, ремонт и дополнительные расходы?</p></div>
+            <div class="qa"><p class="qa__q">Нужна ипотека?</p><p class="qa__a">Какой первоначальный взнос и ежемесячный платёж комфортны?</p></div>
+            <div class="qa"><p class="qa__q">Что важно в доме?</p><p class="qa__a">Площадь, участок, количество комнат, готовность?</p></div>
+            <div class="qa"><p class="qa__q">Какие сроки?</p><p class="qa__a">Нужен готовый дом или готовы рассмотреть строительство?</p></div>
+          </div>
+        </li>
+        <li class="process-list__item">
+          <span class="process-list__index">[03]</span>
+          <div class="process-list__label">Формируем варианты</div>
+          <div class="process-list__content">
+            <p class="process-list__highlight">Мы не отправляем вам всё, что нашли на рынке.<br>Сначала определяем, какие варианты действительно подходят под вашу задачу.</p>
+          </div>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ===== CALCULATORS ===== -->
+  <section class="section" aria-labelledby="calculators-title">
+    <div class="container">
+      <span class="eyebrow">Цифры и решения</span>
+      <h2 id="calculators-title" class="section-title">Сначала цифры. Потом решение</h2>
+      <p class="section-lead">Недвижимость — слишком дорогое решение, чтобы выбирать на глаз. Посчитаем бюджет, реальную стоимость объекта или экономику проекта — и покажем, какие варианты имеют смысл в вашей ситуации.</p>
+
+      <div class="calc-grid" tabindex="0">
+        <article class="calc-card" id="calc-buy">
+          <h3 class="calc-card__title">Покупаю</h3>
+          <p class="calc-card__subtitle">Какую недвижимость я могу себе позволить?</p>
+          <p class="calc-card__label">Что посчитаем:</p>
+          <ul class="calc-card__list">
+            <li>комфортный бюджет покупки;</li>
+            <li>возможный первоначальный взнос;</li>
+            <li>ипотечную нагрузку;</li>
+            <li>диапазон стоимости недвижимости;</li>
+            <li>какие варианты стоит рассматривать.</li>
+          </ul>
+          <button class="btn btn--secondary calc-card__btn js-open-modal" data-scenario="Рассчитать бюджет покупки">Рассчитать бюджет покупки</button>
+        </article>
+
+        <article class="calc-card" id="calc-sell">
+          <h3 class="calc-card__title">Продаю</h3>
+          <p class="calc-card__subtitle">Сколько реально стоит мой объект?</p>
+          <p class="calc-card__label">Что разберём:</p>
+          <ul class="calc-card__list">
+            <li>ориентир рыночной стоимости;</li>
+            <li>аналоги на рынке;</li>
+            <li>что влияет на цену;</li>
+            <li>как подготовить объект;</li>
+            <li>продавать быстрее или искать максимальную цену.</li>
+          </ul>
+          <button class="btn btn--secondary calc-card__btn js-open-modal" data-scenario="Оценить мой объект">Оценить мой объект</button>
+        </article>
+
+        <article class="calc-card" id="calc-invest">
+          <h3 class="calc-card__title">Инвестирую</h3>
+          <p class="calc-card__subtitle">Имеет ли смысл покупать этот объект как инвестицию?</p>
+          <p class="calc-card__label">Что посчитаем:</p>
+          <ul class="calc-card__list">
+            <li>стоимость входа;</li>
+            <li>потенциальный доход от аренды;</li>
+            <li>основные расходы;</li>
+            <li>ориентировочную доходность;</li>
+            <li>ликвидность объекта;</li>
+            <li>возможные сценарии выхода из инвестиции.</li>
+          </ul>
+          <button class="btn btn--secondary calc-card__btn js-open-modal" data-scenario="Рассчитать доходность">Рассчитать доходность</button>
+        </article>
+
+        <article class="calc-card calc-card--wide calc-card--orange" id="calc-complex">
+          <div class="calc-card__body">
+            <h3 class="calc-card__title">Ситуация сложнее, чем просто купить или продать?</h3>
+            <p class="calc-card__text">Не всегда понятно, что делать с недвижимостью: есть несколько собственников, наследство, долги, встречная покупка, сложная продажа, переезд, проблемы с документами или просто непонятно, с чего начать.</p>
+          </div>
+          <button class="btn btn--primary calc-card__btn js-open-modal" data-scenario="Рассказать о своей ситуации">Рассказать о своей ситуации</button>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== HOUSE BUILDING ===== -->
+  <section class="section" id="house-building" aria-labelledby="house-building-title">
+    <div class="container">
+      <span class="eyebrow">Строительство домов</span>
+      <h2 id="house-building-title" class="section-title">Свой дом без самостоятельной стройки</h2>
+      <p class="section-lead">Если хотите дом, но не хотите самостоятельно искать подрядчиков, контролировать стройку и разбираться в десятках решений — поможем пройти этот путь целиком.</p>
+
+      <div class="pricing-layout">
+        <dl class="pricing-table">
+          <div class="pricing-table__row" role="button" tabindex="0" aria-pressed="true" data-house-image="images/construction/house-1.png">
+            <div class="pricing-table__main"><dt>96 м²</dt><dd>5,5 млн ₽</dd></div>
+            <p class="pricing-table__note">для семьи с одним ребёнком</p>
+          </div>
+          <div class="pricing-table__row" role="button" tabindex="0" aria-pressed="false" data-house-image="images/construction/house-2.png">
+            <div class="pricing-table__main"><dt>120 м²</dt><dd>7 млн ₽</dd></div>
+            <p class="pricing-table__note">для семьи с двумя детьми, 4 спальни <span class="badge badge--accent">Популярный вариант</span></p>
+          </div>
+          <div class="pricing-table__row" role="button" tabindex="0" aria-pressed="false" data-house-image="images/construction/house-3.png">
+            <div class="pricing-table__main"><dt>160 м²</dt><dd>10 млн ₽</dd></div>
+            <p class="pricing-table__note">для нескольких поколений под одной крышей</p>
+          </div>
+          <div class="pricing-table__row" role="button" tabindex="0" aria-pressed="false" data-house-image="images/construction/house-4.png">
+            <div class="pricing-table__main"><dt>200 м²</dt><dd>11,5 млн ₽</dd></div>
+            <p class="pricing-table__note">с кабинетом и гостевой комнатой</p>
+          </div>
+        </dl>
+        <div class="pricing-image">
+          <img class="pricing-image__img is-active" src="images/construction/house-1.png" alt="Дом 96 м²">
+          <img class="pricing-image__img" src="images/construction/house-2.png" alt="Дом 120 м²">
+          <img class="pricing-image__img" src="images/construction/house-3.png" alt="Дом 160 м²">
+          <img class="pricing-image__img" src="images/construction/house-4.png" alt="Дом 200 м²">
+        </div>
+      </div>
+
+      <!-- mobile-only card carousel — desktop keeps .pricing-layout above -->
+      <div class="pricing-cards" tabindex="0">
+        <article class="pricing-card" aria-pressed="true">
+          <div class="pricing-card__media">
+            <img class="pricing-card__img" src="images/construction/house-1.png" alt="Дом 96 м²">
+          </div>
+          <div class="pricing-card__body">
+            <div class="pricing-card__main"><span class="pricing-card__area">96 м²</span><span class="pricing-card__price">5,5 млн ₽</span></div>
+            <p class="pricing-card__note">для семьи с одним ребёнком</p>
+          </div>
+        </article>
+
+        <article class="pricing-card" aria-pressed="false">
+          <div class="pricing-card__media">
+            <img class="pricing-card__img" src="images/construction/house-2.png" alt="Дом 120 м²">
+          </div>
+          <div class="pricing-card__body">
+            <div class="pricing-card__main"><span class="pricing-card__area">120 м²</span><span class="pricing-card__price">7 млн ₽</span></div>
+            <p class="pricing-card__note">для семьи с двумя детьми, 4 спальни</p>
+            <span class="badge badge--accent pricing-card__badge">Популярный вариант</span>
+          </div>
+        </article>
+
+        <article class="pricing-card" aria-pressed="false">
+          <div class="pricing-card__media">
+            <img class="pricing-card__img" src="images/construction/house-3.png" alt="Дом 160 м²">
+          </div>
+          <div class="pricing-card__body">
+            <div class="pricing-card__main"><span class="pricing-card__area">160 м²</span><span class="pricing-card__price">10 млн ₽</span></div>
+            <p class="pricing-card__note">для нескольких поколений под одной крышей</p>
+          </div>
+        </article>
+
+        <article class="pricing-card" aria-pressed="false">
+          <div class="pricing-card__media">
+            <img class="pricing-card__img" src="images/construction/house-4.png" alt="Дом 200 м²">
+          </div>
+          <div class="pricing-card__body">
+            <div class="pricing-card__main"><span class="pricing-card__area">200 м²</span><span class="pricing-card__price">11,5 млн ₽</span></div>
+            <p class="pricing-card__note">с кабинетом и гостевой комнатой</p>
+          </div>
+        </article>
+      </div>
+
+      <div class="accordion">
+        <button class="accordion__trigger" id="accordionBtn" aria-expanded="false" aria-controls="accordionPanel">
+          <span>Что входит в стоимость?</span>
+          <span class="accordion__icon" aria-hidden="true"><svg class="icon" viewBox="0 0 20 20"><path d="M10 4v12M4 10h12"/></svg></span>
+        </button>
+        <div class="accordion__panel" id="accordionPanel" aria-hidden="true">
+          <div class="accordion__panel-inner">
+            <div class="accordion__columns">
+              <div class="accordion__col">
+                <div class="accordion__group">
+                  <h4 class="accordion__group-title">Конструкция</h4>
+                  <ul class="accordion__list">
+                    <li>фундамент-плита;</li>
+                    <li>газосиликатные блоки 30 см;</li>
+                    <li>утеплитель пенополистирол 8 см.</li>
+                  </ul>
+                </div>
+                <div class="accordion__group">
+                  <h4 class="accordion__group-title">Кровля</h4>
+                  <ul class="accordion__list">
+                    <li>металлочерепица 0,45 мм;</li>
+                    <li>паро- и ветрозащита;</li>
+                    <li>утепление;</li>
+                    <li>желоба.</li>
+                  </ul>
+                </div>
+                <div class="accordion__group">
+                  <h4 class="accordion__group-title">Отделка</h4>
+                  <ul class="accordion__list">
+                    <li>оштукатуренные стены;</li>
+                    <li>предчистовая отделка.</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="accordion__col">
+                <div class="accordion__group">
+                  <h4 class="accordion__group-title">Окна и фасад</h4>
+                  <ul class="accordion__list">
+                    <li>немецкие окна;</li>
+                    <li>5-камерный профиль;</li>
+                    <li>двухкамерные стеклопакеты;</li>
+                    <li>двухслойная фасадная штукатурка с армированием.</li>
+                  </ul>
+                </div>
+                <div class="accordion__group">
+                  <h4 class="accordion__group-title">Инженерия</h4>
+                  <ul class="accordion__list">
+                    <li>тёплый пол;</li>
+                    <li>электрика;</li>
+                    <li>электрокотёл;</li>
+                    <li>бойлер.</li>
+                  </ul>
+                </div>
+                <div class="accordion__group">
+                  <h4 class="accordion__group-title">Участок и коммуникации</h4>
+                  <ul class="accordion__list">
+                    <li>площадка под террасу;</li>
+                    <li>био-очистная станция на 3–5 человек;</li>
+                    <li>абиссинская скважина с насосом.</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <p class="accordion__extra">Дополнительно: индивидуальный проект — в подарок.*</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="cta-banner cta-banner--tight cta-banner--photo-house">
+        <h2 class="cta-banner__title">Какой дом можно построить<br>на ваш бюджет?</h2>
+        <p class="cta-banner__desc">Посчитаем варианты по площади, комплектации и бюджету.</p>
+        <button class="btn btn--primary js-open-modal" data-scenario="Рассчитать мой дом">Рассчитать мой дом</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== MOVING TO KALININGRAD ===== -->
+  <section class="section" id="relocation" aria-labelledby="relocation-title">
+    <div class="container">
+      <span class="eyebrow">Переезд</span>
+      <h2 id="relocation-title" class="section-title">Переезд в Калининград</h2>
+      <p class="section-lead">Вы можете выбрать недвижимость в Калининграде, даже находясь в другом городе. Разберём районы, бюджет и форматы недвижимости — и организуем покупку дистанционно.</p>
+
+      <div class="two-col-grid" tabindex="0">
+        <article class="info-card">
+          <h3 class="info-card__title">Разбираемся, как вы хотите жить</h3>
+          <ul class="info-card__list">
+            <li>районы</li>
+            <li>город / пригород</li>
+            <li>квартира / дом</li>
+            <li>инфраструктура</li>
+            <li>бюджет</li>
+          </ul>
+        </article>
+        <article class="info-card">
+          <h3 class="info-card__title">Проведём сделку дистанционно</h3>
+          <ul class="info-card__list">
+            <li>онлайн-консультация</li>
+            <li>подбор</li>
+            <li>видеопросмотр</li>
+            <li>проверка объекта</li>
+            <li>ипотека</li>
+            <li>оформление</li>
+          </ul>
+        </article>
+      </div>
+
+      <div class="split-cta">
+        <p class="split-cta__text">Не знаете, какой район выбрать?<br>Расскажем, чем они отличаются и какой сценарий может подойти вам.</p>
+        <button class="btn btn--primary js-open-modal" data-scenario="Подобрать вариант">Подобрать вариант</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== LEAD MAGNET ===== -->
+  <section class="section">
+    <div class="container">
+      <div class="cta-banner cta-banner--tight cta-banner--photo-telegram">
+        <h2 class="cta-banner__title">Получите полезные материалы<br>в нашем Telegram-канале</h2>
+        <p class="cta-banner__desc">Районы, форматы недвижимости, вопросы перед покупкой и частые ошибки тех, кто переезжает из другого города. Также разбираем кейсы, показываем примеры проектов и рекомендации по выбору качественных решений и грамотному планированию бюджета. Всё то, что поможет подготовиться к покупке ещё до первого обращения в агентство.</p>
+        <a class="btn btn--primary" href="https://t.me/mirkv39" target="_blank" rel="noopener">Перейти в канал</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CASE STUDIES ===== -->
+  <section class="section" id="cases" aria-labelledby="cases-title">
+    <div class="container">
+      <span class="eyebrow">Примеры сделок</span>
+      <h2 id="cases-title" class="section-title">Показываем, что сделали — за этим стоят реальные люди и решения.</h2>
+
+      <div class="reviews-strip">
+        <div class="reviews-strip__avatars" aria-hidden="true">
+          <img class="reviews-strip__avatar" src="images/team/exec-66254fc1-9ea1-48c4-b932-cb50e03f1cbc.png" alt="">
+          <img class="reviews-strip__avatar" src="images/team/exec-6b5dbebf-26db-4918-a658-d0c797be331e.png" alt="">
+          <img class="reviews-strip__avatar" src="images/team/exec-9d07d1c3-74c0-4bf7-a083-cba024e6ce61.png" alt="">
+        </div>
+        <a class="reviews-strip__badge" href="https://2gis.ru/kaliningrad/firm/70000001075107655/tab/reviews?m=20.501763%2C54.725296%2F16" target="_blank" rel="noopener">52 отзыва с рейтингом 5.0 на 2ГИС</a>
+      </div>
+
+      <div class="cases-grid" tabindex="0">
+        <div class="case-item">
+          <article class="case-card">
+            <div class="case-card__media">
+              <img class="case-card__img" src="images/case-examples/exec-057737bc-59f4-44e5-8790-6dc0692ee7eb.png" alt="Семья у своего нового дома">
+            </div>
+            <div class="case-card__body">
+              <span class="badge badge--blue case-card__badge">Переезд под ключ</span>
+              <h3 class="case-card__title">Переезд</h3>
+              <p class="case-card__subtitle">Из Москвы — в свой дом под Калининградом</p>
+              <p class="case-card__text">Семья из Москвы хотела переехать в Калининград, но не понимала, где искать дом и стоит ли покупать готовый объект или строить с нуля. Сначала разобрали бюджет и требования к району, затем сравнили готовые дома со строительством. В итоге выбрали участок и строительство дома под ключ. Сделку и часть процессов семья проходила дистанционно.</p>
+            </div>
+          </article>
+          <dl class="case-card__stats">
+            <div><dt>Бюджет</dt><dd>10,5 млн ₽</dd></div>
+            <div><dt>Объект</dt><dd>135 м²</dd></div>
+            <div><dt>Срок</dt><dd>4 мес.</dd></div>
+          </dl>
+        </div>
+
+        <div class="case-item">
+          <article class="case-card">
+            <div class="case-card__media">
+              <img class="case-card__img" src="images/case-examples/exec-936d4646-5c3b-44ca-920e-7cde84f7ebc8.png" alt="Просмотр квартиры перед продажей">
+            </div>
+            <div class="case-card__body">
+              <span class="badge badge--blue case-card__badge">Продажа без демпинга</span>
+              <h3 class="case-card__title">Продали квартиру без демпинга</h3>
+              <p class="case-card__subtitle">Продажа по рыночной цене</p>
+              <p class="case-card__text">Собственник выставил квартиру самостоятельно и за несколько месяцев получил много просмотров, но не было сделки. После анализа аналогов скорректировали позиционирование объекта, подготовили квартиру к показам и выстроили стратегию цены. В результате объект продали за 8,05 млн ₽ — без существенного снижения относительно первоначальной рыночной оценки.</p>
+            </div>
+          </article>
+          <dl class="case-card__stats">
+            <div><dt>Оценка</dt><dd>8,2 млн ₽</dd></div>
+            <div><dt>Продажа</dt><dd>8,05 млн ₽</dd></div>
+            <div><dt>Срок</dt><dd>37 дней</dd></div>
+          </dl>
+        </div>
+
+        <div class="case-item">
+          <article class="case-card">
+            <div class="case-card__media">
+              <img class="case-card__img" src="images/case-examples/exec-fed67f0e-05d9-4de2-ae62-999750e5d66c.png" alt="Клиенты со специалистом на участке будущего дома">
+            </div>
+            <div class="case-card__body">
+              <span class="badge badge--blue case-card__badge">Квартира → дом</span>
+              <h3 class="case-card__title">Дом 120 м² вместо квартиры</h3>
+              <p class="case-card__subtitle">Больше пространства за сопоставимый бюджет</p>
+              <p class="case-card__text">Клиент рассматривал покупку квартиры, но хотел больше пространства и собственный участок. Сравнили несколько сценариев бюджета и пришли к строительству дома. Подобрали формат дома площадью 120 м², рассчитали комплектацию и организовали строительство под ключ.</p>
+            </div>
+          </article>
+          <dl class="case-card__stats">
+            <div><dt>Бюджет</dt><dd>7 млн ₽</dd></div>
+            <div><dt>Объект</dt><dd>120 м²</dd></div>
+            <div><dt>Срок</dt><dd>4 мес.</dd></div>
+          </dl>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== TEAM / REVIEWS ===== -->
+  <section class="section" id="reviews" aria-labelledby="reviews-title">
+    <div class="container">
+      <span class="eyebrow">Команда</span>
+      <h2 id="reviews-title" class="section-title">За каждой ситуацией — специалист, который в ней разбирается.</h2>
+
+      <div class="team-grid" tabindex="0">
+        <article class="team-card">
+          <img class="team-card__photo" src="images/team/exec-66254fc1-9ea1-48c4-b932-cb50e03f1cbc.png" alt="Иванова Диана">
+          <h3 class="team-card__name">Иванова Диана</h3>
+          <p class="team-card__role">главный эксперт</p>
+          <ul class="team-card__specialty">
+            <li class="badge">Продажа сложных объектов</li>
+            <li class="badge">Покупка для переезда</li>
+          </ul>
+        </article>
+        <article class="team-card">
+          <img class="team-card__photo" src="images/team/exec-9d07d1c3-74c0-4bf7-a083-cba024e6ce61.png" alt="Степанова Нина">
+          <h3 class="team-card__name">Степанова Нина</h3>
+          <p class="team-card__role">риэлтор</p>
+          <ul class="team-card__specialty">
+            <li class="badge">Инвестиции</li>
+            <li class="badge">Загородная недвижимость</li>
+          </ul>
+        </article>
+        <article class="team-card">
+          <img class="team-card__photo" src="images/team/exec-6b5dbebf-26db-4918-a658-d0c797be331e.png" alt="Смирнов Иван">
+          <h3 class="team-card__name">Смирнов Иван</h3>
+          <p class="team-card__role">юрист</p>
+          <ul class="team-card__specialty">
+            <li class="badge">Наследство</li>
+          </ul>
+        </article>
+      </div>
+
+      <div class="cta-banner cta-banner--dark final-cta">
+        <span class="eyebrow">Первая встреча — 15 минут</span>
+        <h2 class="cta-banner__title">За 15 минут определим,<br>с чего начать именно вам</h2>
+        <p class="cta-banner__desc">Коротко разберём вашу ситуацию, определим вектор действий и подскажем, какой следующий шаг будет разумным.</p>
+
+        <div class="final-cta__columns">
+          <div class="final-cta__media">
+            <img class="final-cta__img" src="images/final-cta.png" alt="Семья выбирает вариант недвижимости">
+          </div>
+
+          <div class="final-cta__form-wrap">
+            <form class="final-cta__form" id="finalCtaForm" novalidate>
+              <h3 class="final-cta__form-title">Оставьте контакты — свяжемся и запишем вас на удобное время</h3>
+
+              <div class="final-cta__row">
+                <label class="field final-cta__field">
+                  <span class="field__label">Ваше имя</span>
+                  <input class="field__input" type="text" name="name" id="finalCtaName" autocomplete="name" placeholder="Иван Смирнов" required>
+                </label>
+
+                <label class="field final-cta__field">
+                  <span class="field__label">Номер телефона</span>
+                  <input class="field__input" type="tel" name="phone" id="finalCtaPhone" autocomplete="tel" placeholder="+7 (900) 900-90-90" inputmode="numeric" required>
+                </label>
+              </div>
+
+              <label class="field final-cta__field">
+                <span class="field__label">Коротко расскажите о ситуации <span class="field__optional">— необязательно</span></span>
+                <textarea class="field__input final-cta__textarea" name="message" id="finalCtaMessage" rows="2"></textarea>
+              </label>
+
+              <div class="field final-cta__field final-cta__contact-methods">
+                <span class="field__label">Предпочтительный способ связи</span>
+                <div class="contact-methods">
+                  <label class="contact-method">
+                    <input type="checkbox" name="contactMethod" value="telegram">
+                    <span class="contact-method__box" aria-hidden="true"><svg class="icon" viewBox="0 0 20 20"><path d="M5 10l3 3 7-7"/></svg></span>
+                    <span class="contact-method__text">Telegram</span>
+                  </label>
+                  <label class="contact-method">
+                    <input type="checkbox" name="contactMethod" value="call">
+                    <span class="contact-method__box" aria-hidden="true"><svg class="icon" viewBox="0 0 20 20"><path d="M5 10l3 3 7-7"/></svg></span>
+                    <span class="contact-method__text">Звонок</span>
+                  </label>
+                  <label class="contact-method">
+                    <input type="checkbox" name="contactMethod" value="max">
+                    <span class="contact-method__box" aria-hidden="true"><svg class="icon" viewBox="0 0 20 20"><path d="M5 10l3 3 7-7"/></svg></span>
+                    <span class="contact-method__text">Max</span>
+                  </label>
+                </div>
+              </div>
+
+              <label class="final-cta__consent">
+                <input type="checkbox" class="final-cta__consent-input" id="finalCtaConsent" name="consent" required>
+                <span>Я согласен(на) на обработку персональных данных. <a href="https://mkv39.ru/privacypolicy" target="_blank" rel="noopener">Политика конфиденциальности</a></span>
+              </label>
+
+              <button class="btn final-cta__submit" type="submit" id="finalCtaSubmit" disabled>Записаться на 15-минутную встречу</button>
+              <p class="final-cta__error" id="finalCtaError" hidden>Не получилось отправить заявку. Попробуйте ещё раз.</p>
+            </form>
+
+            <div class="final-cta__success" id="finalCtaSuccess" hidden>
+              <p>Спасибо! Мы свяжемся с вами и согласуем время встречи.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACTS ===== -->
+  <section class="section" id="contacts" aria-labelledby="contacts-title">
+    <div class="container">
+      <span class="eyebrow">Контакты</span>
+      <h2 id="contacts-title" class="section-title">Контакты</h2>
+
+      <div class="contacts-grid">
+        <div class="contacts-col">
+          <h3 class="contacts-info__label">Адрес</h3>
+          <p>г. Калининград, ул. Генерал-Лейтенанта Озерова, 17Б,<br>ТЦ «Мега», 8 этаж, офис 813</p>
+
+          <h3 class="contacts-info__label">Почта</h3>
+          <p><a href="mailto:mirkwartir39@gmail.com">mirkwartir39@gmail.com</a></p>
+        </div>
+
+        <div class="contacts-col">
+          <h3 class="contacts-info__label">Телефон</h3>
+          <p><a href="tel:+79211611455">+7 (921) 161-14-55</a></p>
+
+          <h3 class="contacts-info__label">Мы в соц. сетях</h3>
+          <ul class="social-list">
+            <li><a class="icon-btn" href="https://t.me/mirkv39" target="_blank" rel="noopener" aria-label="Telegram"><svg class="icon icon--sm" viewBox="0 0 20 20"><path d="M17 3 2 9l5 2m10-8-2 13-6-4m8-9-8 9m0 0v4"/></svg></a></li>
+            <li><a class="icon-btn" href="https://wa.me/79211611455" target="_blank" rel="noopener" aria-label="WhatsApp"><svg class="icon icon--sm" viewBox="0 0 20 20"><path d="M4 17l1-3a7 7 0 1 1 3 3l-4 1z"/><path d="M7.5 8.5c0 3 2 5 5 5"/></svg></a></li>
+            <li><a class="icon-btn" href="https://www.youtube.com/@Alexrealtor39" target="_blank" rel="noopener" aria-label="YouTube"><svg class="icon icon--sm" viewBox="0 0 20 20"><rect x="2" y="5" width="16" height="10" rx="3"/><path d="M8.5 8v4l4-2z" fill="currentColor" stroke="none"/></svg></a></li>
+            <li><a class="icon-btn" href="https://www.tiktok.com/@alexrealtor39" target="_blank" rel="noopener" aria-label="TikTok"><svg class="icon icon--sm" viewBox="0 0 20 20"><path d="M11 3v9.5a2.5 2.5 0 1 1-2.5-2.5M11 3c.3 2 1.8 3.5 3.5 3.6"/></svg></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ===== FOOTER ===== -->
+<footer class="footer">
+  <div class="container footer__inner">
+    <a href="#top" class="logo logo--footer" aria-label="Мир Квартир.39 — на главную">
+      <img src="images/logo.svg" alt="Мир Квартир.39" class="logo__img">
+    </a>
+
+    <div class="footer__legal">
+      <p><a href="https://mkv39.ru/privacypolicy" target="_blank" rel="noopener">Политика конфиденциальности</a></p>
+      <p><a href="https://mkv39.ru/cookiepolicy" target="_blank" rel="noopener">Согласие на обработку данных</a></p>
+    </div>
+
+    <div class="footer__requisites">
+      <p>ООО «МИР КВАРТИР.39»</p>
+      <p>ОГРН 1233900004634</p>
+      <p>ИНН 3900010208, КПП 390001001</p>
+    </div>
+
+    <div class="footer__cta">
+      <p>Уже понимаете,<br>что ищете?</p>
+      <a class="btn btn--secondary" href="#scenarios">Смотреть варианты</a>
+    </div>
+  </div>
+</footer>
+
+<!-- ===== MODAL ===== -->
+<div class="modal-overlay" id="modalOverlay" hidden>
+  <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <button class="icon-btn modal__close" id="modalClose" aria-label="Закрыть"><svg class="icon icon--sm" viewBox="0 0 20 20"><path d="M5 5l10 10M15 5 5 15"/></svg></button>
+    <h2 class="modal__title" id="modalTitle">Обсудить ситуацию</h2>
+    <p class="modal__desc">Оставьте контакты — специалист свяжется с вами в ближайшее время.</p>
+    <form class="modal__form" id="modalForm">
+      <label class="field">
+        <span class="field__label">Имя</span>
+        <input class="field__input" type="text" name="name" autocomplete="name" required>
+      </label>
+      <label class="field">
+        <span class="field__label">Телефон</span>
+        <input class="field__input" type="tel" name="phone" autocomplete="tel" required>
+      </label>
+      <button class="btn btn--primary field__submit" type="submit">Отправить заявку</button>
+      <p class="field__note">Это демонстрационная форма прототипа — заявки не отправляются.</p>
+    </form>
+  </div>
+</div>
+
+<script src="js/main.js"></script>
+</body>
+</html>
