@@ -813,7 +813,7 @@ p { font-size: var(--fs-body); }
       rgba(242, 242, 242, 0.2) 62%,
       rgba(242, 242, 242, 0) 100%
     ),
-    url("../images/image-2.png");
+    url("../images/image-2.webp");
   background-size: cover;
   background-position: center right;
   background-repeat: no-repeat;
@@ -835,7 +835,7 @@ p { font-size: var(--fs-body); }
         rgba(242, 242, 242, 0.35) 75%,
         rgba(242, 242, 242, 0) 100%
       ),
-      url("../images/image-2.png");
+      url("../images/image-2.webp");
   }
   .cta-banner--photo .cta-banner__title { max-width: 100%; }
 }
@@ -851,7 +851,7 @@ p { font-size: var(--fs-body); }
       rgba(242, 242, 242, 0.1) 70%,
       rgba(242, 242, 242, 0) 100%
     ),
-    url("../images/construction/cta-card-bg.png");
+    url("../images/construction/cta-card-bg.webp");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -869,7 +869,7 @@ p { font-size: var(--fs-body); }
         rgba(242, 242, 242, 0.35) 75%,
         rgba(242, 242, 242, 0) 100%
       ),
-      url("../images/construction/cta-card-bg.png");
+      url("../images/construction/cta-card-bg.webp");
   }
   .cta-banner--photo-house .cta-banner__title { max-width: 100%; }
 }
@@ -891,7 +891,7 @@ p { font-size: var(--fs-body); }
       rgba(242, 242, 242, 0.2) 78%,
       rgba(242, 242, 242, 0) 100%
     ),
-    url("../images/cta-telegram.png");
+    url("../images/cta-telegram.webp");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -915,7 +915,7 @@ p { font-size: var(--fs-body); }
         rgba(242, 242, 242, 0.8) 78%,
         rgba(242, 242, 242, 0.55) 100%
       ),
-      url("../images/cta-telegram.png");
+      url("../images/cta-telegram.webp");
   }
   .cta-banner--photo-telegram .cta-banner__title,
   .cta-banner--photo-telegram .cta-banner__desc { max-width: 100%; }
